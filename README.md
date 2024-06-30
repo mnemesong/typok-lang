@@ -98,7 +98,7 @@ Typok is extendable type-declaration language. It has simplest syntaxis and bay 
 - Single-line comments define by `//` characters and not take a part in compilation
 
 
-## Custom types
+### Custom types
 Any custom type, not includes in standart may be optional implemented in interpreter. Custom types, declared as `required` must be implemented or declared in interpreter.
 
 
