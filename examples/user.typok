@@ -1,0 +1,30 @@
+require timestamp
+require str.pattern
+
+userName: str(minlen(8)) //str type with custom limitation
+
+taxNum: num(int & min(1000000) & max(9999999)) //number with limitations
+
+role: 0 | "user" | "guest" //literals union
+
+rules: {} //array of dynamic values
+
+isUnknown: bool(false) //bool literal type. equal to `false`
+
+dateSql: str(required & pattern("/^\n\n\-\n\n\-\n\n\n\n$/i")) //str with custom limitations
+
+passwordVerificator: * -> bool //function from any to bool
+
+return { //record type
+    userName: userName
+    taxNum: taxNum
+    role: role
+    rules: rules
+    isUnknown: isUnknown
+    dateSql: dateSql
+    password: * | null
+    passwordVerificator: passwordVerificator
+    passwordHash: *
+    createdAt: timestamp
+    sharding: num(int8)
+} //module return type
