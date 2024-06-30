@@ -39,6 +39,7 @@ return { //record type
 
 
 ## Example of usage
+In lua:
 ```lua
 typoki = require "typok-interpreter" --pseudo lib
 typoki = typoki.load({
